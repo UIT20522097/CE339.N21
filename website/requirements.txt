@@ -1,0 +1,5 @@
+# python==3.9.16
+Flask==2.3.2
+pymongo
+Flask-MQTT
+requests

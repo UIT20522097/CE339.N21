@@ -1,0 +1,79 @@
+/* Reset CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+}
+.card{
+    margin: 100px auto;
+    width: 320px;
+    height: auto;
+    background: #272d40;
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#font-display{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#temperature {
+    width: 80%;
+    height: 20px;
+    margin: auto;
+    border: 1px solid black;
+    position: relative;
+}
+  
+  .scale {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .range {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(32, 32, 187), rgb(170, 9, 9));
+    position: absolute;
+    top: 0;
+    /* left: 00%; */
+  }
+  
+  #current {
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 23%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+  
+  .over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+  }
+  

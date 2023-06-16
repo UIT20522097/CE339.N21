@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{ url_for('static', filename = 'image/plant.png')}}" type="image">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'main.css')}}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <title>Smart Garden</title>
+  </head>
+  <body>
+    <header>
+      <a class="logo-link" target="_blank" href="#">
+        <div class="logo-box">
+          <div class="logo">
+            <span class="logo-letters">UIT</span>
+          </div>
+          <span class="logo-text">Smart Garden</span>
+        </div>
+      </a>
+
+      <nav>
+        <a class="header-link" target="_blank" href="#">Home</a>
+        <a class="header-link" target="_blank" href="#">About us</a>
+        <a class="header-link" target="_blank" href="#">Contact</a>
+      </nav>
+
+      <button class="menu-button" id="menu-button">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">Menu</span>
+        <button class="close-button" id="close-button">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <a class="sidebar-link" target="_blank" href="#">Home</a>
+      <a class="sidebar-link" target="_blank" href="#">About us</a>
+      <a class="sidebar-link" target="_blank" href="#">Contact</a>
+    </div>
+
+    <div class="body-web">
+      <div class="box">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+        <div class="weathercon">
+          <i class="fas fa-temperature-low" style="color: #e35c08"></i>
+        </div>
+        <div class="info">
+          <h2 class="temp-info">Nhiệt độ</h2>
+          <h3 class="date">Hồ Chí Minh</h3>
+          <h3 class="date" id="date"></h3>
+          <h1 class="temp" id="temp"></h1>
+        </div>
+      </div>
+      <div class="switch">
+        <div class="switch-holder">
+          <div class="switch-label">
+              <i class="statusFan"></i><span>Trạng thái quạt</span>
+          </div>
+          <div class="switch-toggle">
+              <input type="checkbox" id="fan">
+              <label for="fan"></label>
+          </div>
+      </div>
+      </div>
+      <div class="chart-row">
+        <iframe
+          width="450"
+          height="260"
+          style="border: 1px solid #cccccc"
+          src="https://thingspeak.com/channels/2173391/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'source.js')}}"></script>
+  </body>
+</html>
